@@ -1,0 +1,162 @@
+/********************** NORSE MYTHOLOGY STYLE **************/
+
+/******** FONTS *********************/
+@font-face {src:url("../fuentes/RunyTunesRevisitedNF.ttf");
+            font-family: runes;}
+
+@font-face {src:url("../fuentes/BLKCHCRY.TTF");
+                font-family: chancery;}
+/******** GENERAL STYLE *************/
+/*html {scroll-behavior: smooth;}*/
+body {background-color:black;
+      color:white;}
+
+#container {width:90%; 
+            margin:0 auto;}
+
+section { padding:3%;}
+
+section .section-title {color:white;
+                        font-size:3.5em;
+                        text-align:center;
+                        font-family:runes;
+                        margin:2%;
+                        }
+/********* HERO SECTION *************/
+
+#hero {background-image: url("../imagenes/norse-mithology-bg.jpg");
+       background-size: cover;
+       background-position: 66%;
+       height:100vh;
+       position:relative;}
+
+#hero #title {font-family:runes;
+              font-size:4em;
+              color:black;
+              position:absolute;
+              top:20px;
+              left:20px;}
+
+/*********** NAVIGATION SECTION **************/
+nav {position:sticky;
+     top:0;
+     z-index:99;
+     opacity:0.7;}
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    font-family:runes;
+    font-size:1.4em;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    
+  }
+  
+  .topnav a:hover {
+    background-color: #877E51;
+    color: black;
+    opacity:1;
+  }
+/*  
+  .topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+*/  
+  .topnav .icon {
+    display: none;
+  }
+  
+  @media screen and (max-width: 800px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 800px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+/*********** INTRODUCTION SECTION ************/
+#introduction {font-family:chancery;
+               padding:5%;
+               width:80%;
+               margin:0 auto;
+               border-bottom:2px solid rgb(201, 156, 99);}
+#introduction p {font-size:1.7em;
+                 text-align:justify;}
+
+#introduction p:first-letter {font-size:1.8em;
+                              color:rgb(201, 156, 99);}
+#introduction .izqda {float:left;
+                      width:50%;
+                      margin:2%;}
+
+/*********** GALLERY SECTION ****************/
+.grid4 {display:grid;
+        grid-template-columns: 25% 25% 25% 25%;}
+
+.item4 {border:1px solid rgb(201, 156, 99);}
+
+.item4 img {width:80%;
+            margin:5% 10%;
+            opacity:0.5;
+}
+
+.item4 img:hover {opacity:1;}
+
+.item4 p {
+          font-family: runes;
+          font-size:2em;
+          text-align:center;}
+
+/*********** FOOTER *************************/
+footer {font-family:chancery;
+        font-size:1.2em;
+        background-color:#877E51;
+        color:black;
+        padding:2%;}
+#pie {width:50%;
+    margin:auto;}
+
+footer .izqda {float:left;
+              width:20%;
+              margin-right:40px;
+              
+              }
+
+
+
+/*********** MEDIA QUERIES ******************/
+
+@media only screen and (max-width:900px){
+    .grid4 {grid-template-columns:50% 50%;}
+    #introduction .izqda {width:100%;}
+    footer .izqda {width:30%;}
+}
+
+@media only screen and (max-width:600px){
+    #container, #pie {width:100%;}
+    .grid4 {grid-template-columns:100%;}
+    #introduction p {text-align:left;}
+    footer .izqda {width:20%;}
+}
+
